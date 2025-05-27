@@ -9,7 +9,6 @@ jobs:
   dev:
     env:
       LABPASSPHRASE: ${{ secrets.LABPASSPHRASE }}
-      python_ver: 3.11.2
     timeout-minutes: 15
     runs-on: self-hosted
     steps:
@@ -21,6 +20,8 @@ jobs:
 
       - name: Setup Python
         uses: actions/setup-python@v5
+        with:
+          python-version: 3.11.2
 
       - name: Install Python requirements
         run: pip3 install -r requirements.txt
