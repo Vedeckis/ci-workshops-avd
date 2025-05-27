@@ -9,6 +9,7 @@ jobs:
   dev:
     env:
       LABPASSPHRASE: ${{ secrets.LABPASSPHRASE }}
+      python_ver: 3.11.2
     timeout-minutes: 15
     runs-on: self-hosted
     steps:
